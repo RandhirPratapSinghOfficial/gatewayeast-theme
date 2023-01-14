@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+        
+            --primary-color: #ff731d;
+        }
+        *,*::after,
+        *::before{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            /* background: linear-gradient(to right, #74ebd5,#acb6e5); */
+
+        }
+        /* Progress bar */
+            .progressbar{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                margin: 2rem 0 4rem 0;
+
+            }
+            .progressbar::before, .progress{
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 1px !important;
+                width: 100%;
+                background-color: #dcdcdc;
+                counter-reset: step;
+            }
+            .progress{
+                background-color: var(--primary-color) !important;
+                width: 100%;
+                transition: 0.3s ease-in-out;
+
+            }
+            .progress-steps{
+                width: 35px;
+                height: 35px;
+                background-color: #dcdcdc;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+
+
+            }
+
+            .progress-steps::before{
+                counter-increment: step;
+                content: counter(step);
+            }
+            .progress-steps::after{
+                content: attr(data-title);
+                position: absolute;
+                top: calc(100% + 0.5rem);
+                font-size: .80rem;
+                color: #666666;
+
+            }
+            .progress-steps.active{
+                background-color: var(--primary-color);
+                color: #f3f3f3;
+            }
+
+
+
+        /* form */
+        form{
+            width: 100%;
+            /* width: clamp(320px, 30%, 430px); */
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            border-radius: .35rem;
+            padding: 10px 20px ;
+            /* background-color: #ecf0f1; */
+            /* box-shadow: 2px 4px 11px #000; */
+        }
+        .form-step{
+            display: none;
+            transform-origin: top;
+            animation: animate 0.5s;
+        }
+        @keyframes animate {
+            from{
+                transform: scale(1,0);
+                opacity: 0;
+
+            }
+            to{
+                transform: scale(1,1);
+                opacity: 1;
+            }
+            
+        }
+        .form-step.active{
+            display: block;
+        }
+        input{
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            /* border-radius: 0.25rem; */
+
+        }
+        .width-50{
+            width: 50%;
+        }
+        .ml-auto{
+            margin: auto;
+        }
+        
+        label{
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .input-group{
+            margin: 5px 0;
+        }
+        .btn-group{
+            display: grid;
+            grid-template-columns: repeat(2,1fr) !important;
+            gap: 1.5rem !important;
+
+        }
+        .btn{
+            padding: 0.75rem;
+            width: 130px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background-color: var(--primary-color) !important;
+            color: #fff !important;
+            border-radius: 5px !important;
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+
+        }
+        .btn:active{
+            transform: scale(.98);
+        }
+        .btn:hover{
+            box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+        }
+        .text-center{
+            text-align: center;
+            color: #2c3e50;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="https://formspree.io/f/mbjejvkl"
+    method="POST" class="form">
+        <h5 class="text-center"><b>Please Fill the Details</b></h5>
+        <!-- Progress Bar -->
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+
+            <div class="progress-steps active" data-title="Name">
+
+            </div>
+            <div class="progress-steps" data-title="Mobile Number">
+                
+            </div>
+            <div class="progress-steps" data-title="Email">
+                
+            </div>
+            <div class="progress-steps" data-title="Message">
+                
+            </div>
+        </div>
+
+        <!-- Steps form -->
+        <div class="form-step active">
+            <div class="form-field">
+                <input id="name" name="Name" required type="text" class="input-text" />
+                <label for="name" class="label">Enter Name</label>
+                <span id="nameErr" class="error"></span>
+              </div>
+            
+            <div class="">
+                <a  class="btn btn-next width-50 ml-auto ">Next</a>
+            </div>
+    
+        </div>
+        <div class="form-step ">
+            <div class="form-field">
+                <input id="phone" name="Mobile" required type="number" class="input-text" />
+                <label for="phone" class="label">Enter Mob Number</label>
+                <input type="text" name="Subject" value="New Lead from website Home Page" style="display: none;">
+                
+                <!-- <input
+                  id="country-code-3"
+                  type="text"
+                  name="country-code"
+                  hidden
+                  style="display: none"
+                /> -->
+                
+              </div>
+            
+            <div class="btn-group">
+                <a href="#" class="btn btn-pre ">Previous</a>
+                <a href="#" class="btn btn-next ">Next</a>
+            </div>
+    
+        </div>
+        <div class="form-step ">
+            <div class="form-field" >
+                <input id="email" name="Email" required type="email" class="input-text" />
+                <label for="email" class="label">Enter Email</label>
+                
+              </div>
+            <div class="btn-group">
+                <a href="#" class="btn btn-pre ">Previous</a>
+                <a href="#" class="btn btn-next ">Next</a>
+            </div>
+    
+        </div>
+        <div class="form-step ">
+            <div class="form-field">
+                <input id="message" name="Message" required type="text" class="input-text" />
+                <label for="message" class="label">Enter you Message</label>
+                
+              </div>
+            <div class="btn-group">
+                <a href="#" class="btn btn-pre ">Previous</a>
+                <input type="submit" value="Submit" class="btn">
+            </div>
+    
+        </div>
+    </form>
+    <script src="index.js"></script>
+    <script>
+        const prevBtns=document.querySelectorAll( '.btn-pre');
+        const nextBtns=document.querySelectorAll( ('.btn-next'));
+        const progress=document.querySelectorAll( ('.progress'));
+        const formSteps=document.querySelectorAll( ('.form-step'));
+        const progressSteps=document.querySelectorAll('.progress-steps');
+
+        let formStepsNum=0;
+
+        nextBtns.forEach(btn=>{
+            btn.addEventListener('click',()=>{
+                formStepsNum++;
+                updateFormSteps();
+                updateProgressbar();
+
+            })
+        })
+        prevBtns.forEach(btn=>{
+            btn.addEventListener('click',()=>{
+                formStepsNum--;
+                updateFormSteps();
+                updateProgressbar();
+
+            })
+        })
+
+        function updateFormSteps(){
+            formSteps.forEach(formStep=>{
+                formStep.classList.contains('active')&&
+                formStep.classList.remove('active')
+            })
+            formSteps[formStepsNum].classList.add('active');
+        }
+        function updateProgressbar(){
+            progressSteps.forEach((progressStep,idx)=>{
+                if(idx < formStepsNum + 1){
+                    progressStep.classList.add('active');
+                }else{
+                    progressStep.classList.remove('active'); 
+                }
+            })
+            // const progressActive = document.querySelectorAll('.progress-steps.active')
+            // progress.style.width=(progressActive.length -1) / (progressSteps.length-1) * 100 + '%';
+            
+        }
+
+
+
+
+
+</script>
+</body>
+</html>

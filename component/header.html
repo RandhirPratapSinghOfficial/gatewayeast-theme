@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../img/logo.png" alt="logo">
+        </div>
+        <ul class="menu-item" id="menu_item">
+            <li><a href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="../about.html"><i class="fa fa-user"></i> About </a></li>
+            <li><a href="../service.html"><i class="fa fa-wrench"></i> Service </a></li>
+            <li><a href="../blog.html"><i class="fab fa-blogger-b"></i> Blog </a></li>
+            <li><a href="../price.html"><i class="fa fa-tag"></i> Price </a></li>
+            <li><a href="../contactus.html"><i class="fa fa-envelope"></i> Contact Us </a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa fa-bars " id="openIcon" onclick="menu_open()"></i>
+            <i class="fa fa-close " id="closeIcon" onclick="menu_close()"></i>
+        </div>
+    </nav>
+
+    <script>
+       const menu_item=document.getElementById("menu_item");
+       const open=document.getElementById("openIcon");
+       const close=document.getElementById("closeIcon");
+
+       function menu_open(){
+        open.style.display = "none";
+        close.style.display = "block";
+        menu_item.style.display = "block";
+
+       }
+       function menu_close(){
+        open.style.display = "block";
+        close.style.display = "none";
+        menu_item.style.display = "none";
+
+       }
+
+    </script>
+</body>
+</html>

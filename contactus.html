@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | White-Label Payment Gateway Solutions</title>
+    <link rel="icon" href="img/favicon.png" />
+    <!-- form script -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css"
+      rel="stylesheet"
+    />
+
+    <!-- form script end -->
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <section class="custom_container">
+      <div id="navbar"></div>
+      <div class="blog">
+        <h4 class="heading  pb-2">Always Happy To Assist!!</h4>
+        <p>
+          Interested in our service? And wanna learn more about it? Anything on
+          your mind, we will be happy to help you. Request a callback.
+        </p>
+        <form action="https://formspree.io/f/mbjejvkl"
+        method="POST" >
+          <div class="row pb-2">
+            <div class="col-md-6 col-12">
+              <div class="form-field">
+                <input id="name" name="name" required type="text" class="input-text" />
+                <label for="name" class="label">Enter Name</label>
+                
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-field" >
+                <input id="email" name="email" required type="email" class="input-text" />
+                <label for="email" class="label">Enter Email</label>
+                
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-field">
+                <input
+                  id="phone1"
+                  name="Number"
+                  required
+                  type="number"
+                  placeholder="Enter Mob Number"
+                  class="input-text"
+                />
+                <input type="text" name="Subject" value="New Lead from website" style="display: none;">
+                
+                <input
+                  id="country-code-1"
+                  type="text"
+                  name="country-code"
+                  hidden
+                  style="display: none"
+                />
+                
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-field">
+                <input
+                  id="phone2"
+                  name="whatsapp"
+                  required
+                  type="number"
+                  placeholder="Enter Whatsapp number"
+                  class="input-text"
+                />
+                <!-- <label for="whatsapp" class="label">Enter Whatsapp number</label>
+                    <span id="whatsappErr" class="error"></span> -->
+                <input
+                  id="country-code-2"
+                  type="text"
+                  name="country-code"
+                  hidden
+                  style="display: none"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-field">
+                <input id="company" name="company" required type="text" class="input-text" />
+                <label for="company" class="label">Enter Company Name</label>
+                <span id="companyErr" class="error"></span>
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="form-field">
+                <input id="message" name="message" required type="text" class="input-text" />
+                <label for="message" class="label">Enter you Message</label>
+                
+              </div>
+            </div>
+            <!-- <div class="col-md-6 col-12">
+                <input  type="checkbox" required class="checkbox" />
+                <span >I agree to the Privacy Policy</span>
+                <span id="messageErr" ></span>
+            </div> -->
+            <div class="col-md-6 col-12">
+              <button type="submit" class="cus_bnt">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="custom_container1 py-4">
+      <div class="blog">
+        <h3>Postal Address:</h3>
+        <div class="row mt-4">
+          <div class="col-md-6 col-12">
+            <h4>Top Features</h4>
+            <div class="pl-3">
+              <p>
+                7 Temasek Boulevard <br />
+                #12-07 Suntec Tower 1 <br />
+                Singapore 038987
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <h4>Pros</h4>
+            <div class="pl-3">
+              <p>
+                Green Boulevard, <br />
+                Level 5, Tower C Block B9/A,<br />
+                National Capital Of Delhi,<br />
+                Noida Sector 62,<br />
+                Noida - 201301
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer-section"></section>
+  
+    <script>
+    
+      $("#navbar").load("../component/header.html");
+      $("#footer-section").load("../component/footer.html");
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
