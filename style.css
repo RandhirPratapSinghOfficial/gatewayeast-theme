@@ -338,8 +338,11 @@ ul li{
     align-items: center;
 }
 .Feature_card img{
-    height: 92px;
-    width: 110px;
+    height: 62px;
+    width: 72px;
+    border-right: 1.5px solid rgb(181, 179, 179);
+    /* border-radius: 50%; */
+    padding-right: 10px;
 }
 
 .blog{
