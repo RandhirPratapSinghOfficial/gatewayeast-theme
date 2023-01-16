@@ -5,6 +5,9 @@
   font-family: Hahmlet;
   /* overflow-x: hidden; */
 }
+body{
+  overflow-x: hidden;
+}
 :root {
   --text-color: #43464b;
   --theme-color: #ff731d;

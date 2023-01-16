@@ -21,6 +21,9 @@
     />
 
     <!-- form script end -->
+    <!-- Animation Pluigin -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -37,7 +40,7 @@
   <body>
     <section class="custom_container">
       <div id="navbar"></div>
-      <div class="blog">
+      <div class="blog" data-aos="fade-right">
         <h4 class="heading  pb-2">Always Happy To Assist!!</h4>
         <p>
           Interested in our service? And wanna learn more about it? Anything on
@@ -129,7 +132,7 @@
         </form>
       </div>
     </section>
-    <section class="custom_container1 py-4">
+    <section class="custom_container1 py-4" data-aos="fade-left">
       <div class="blog">
         <h3>Postal Address:</h3>
         <div class="row mt-4">
@@ -165,6 +168,13 @@
     
       $("#navbar").load("../component/header.html");
       $("#footer-section").load("../component/footer.html");
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script >
+        AOS.init({
+          offset: 140,
+          duration: 1000,
+        });
     </script>
     <script src="index.js"></script>
   </body>

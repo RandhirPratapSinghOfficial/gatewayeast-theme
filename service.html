@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Prime Services for White-Label Payment Gateway</title>
     <link rel="icon" href="img/favicon.png" />
+    <!-- Animation Pluigin -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -24,15 +27,15 @@
     <section class="custom_container">
       <div class="mb-md-5" id="navbar"></div>
       <div class="blog">
-        <h1 class="heading pt-5 pb-3">Integration</h1>
-        <p class="text-center py-3">
+        <h1 class="heading pt-5 pb-3" data-aos="fade-in">Integration</h1>
+        <p class="text-center py-3" data-aos="fade-right">
           To meet your rising business requirements and help you start your own
           payment gateway service, Gatewayeast comes with more than 200
           third-party systems integration such as marketing tools, payment
           service providers, logistic partners, and more. If needed, we provide
           additional system integration by our expert team in record time.
         </p>
-        <div class="sevice_list py-4">
+        <div class="sevice_list py-4" data-aos="fade-left">
           <ul>
             <li>With acquiring banks</li>
             <li>With the pre-paid card system</li>
@@ -44,7 +47,7 @@
         </div>
       </div>
     </section>
-    <section class="custom_container1 py-4">
+    <section class="custom_container1 py-4" data-aos="fade-left">
       <div class="blog">
         <h1 class="pb-3">Migration</h1>
         <p class="text-center">
@@ -66,6 +69,14 @@
     <script>
       $("#navbar").load("../component/header.html");
       $("#footer-section").load("../component/footer.html");
+    </script>
+    <!-- For Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script >
+        AOS.init({
+          offset: 140,
+          duration: 1000,
+        });
     </script>
   </body>
 </html>

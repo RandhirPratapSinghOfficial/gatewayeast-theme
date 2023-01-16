@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Affordable Pricing for White-Label Payment Solutions</title>
     <link rel="icon" href="img/favicon.png" />
+    <!-- Animation Pluigin -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -24,7 +27,7 @@
       <div class="mb-md-5" id="navbar"></div>
       <br />
       <div class="blog pb-md-5">
-        <div class="card px-3 py-5">
+        <div class="card px-3 py-5" data-aos="flip-up">
           <div class="row pl-5">
             <div class="col-md-4 col-12">
               <h1 class="theme-color">FREE*</h1>
@@ -50,11 +53,12 @@
       </div>
     </section>
     <section class="custom_container1">
-      <div class="stamp">
+      <div class="stamp" data-aos="fade-in">
         <img src="img/FINAL-01-min.png" class="mx-auto" alt="stamp" />
       </div>
       <div class="blog py-3 pl-2">
-        <h4>1.) What will my Gatewayeast subscription cost?</h4>
+        <div data-aos="fade-left">
+          <h4>1.) What will my Gatewayeast subscription cost?</h4>
         <p class="pl-4">
           Gatewayeast proffers affordable pricing because we believe every
           business should grow. Your subscription cost will depend on the number
@@ -64,26 +68,33 @@
           <br /><br />
           (2* $99) + (1,000* $0.05) = $248
         </p>
-        <h4>2.) Can I try gateway service for free?</h4>
+        </div>
+        <div data-aos="fade-right">
+          <h4>2.) Can I try gateway service for free?</h4>
         <p class="pl-4">
           Of course, you can. There is no setup fee for the gateway. So, you can
           integrate and process as many transactions as you want per month in
           our SandBox environment. We will charge the fee, once you will start
           live transactions.
         </p>
-        <h4>3.) When I’ll get the bill?</h4>
+        </div>
+        <div data-aos="fade-left">
+          <h4>3.) When I’ll get the bill?</h4>
         <p class="pl-4">
           You will receive the invoice for all gateway connections and all
           transactions you processed in the previous month on the beginning of
           the month.
         </p>
-        <h4>4.) Still, have queries?</h4>
+        </div>
+        <div data-aos="fade-right">
+          <h4>4.) Still, have queries?</h4>
         <p class="pl-4">
           Get more clarity with our experts. Contact us at hi@gatewayeast.com.
           *Free setup is available for a limited period. We might change our
           pricing without any prior notice. To avail free setup service, minimum
           one year contract in required.
         </p>
+        </div>
       </div>
     </section>
 
@@ -92,6 +103,14 @@
     <script>
       $("#navbar").load("../component/header.html");
       $("#footer-section").load("../component/footer.html");
+    </script>
+    <!-- For Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script >
+        AOS.init({
+          offset: 140,
+          duration: 1000,
+        });
     </script>
   </body>
 </html>

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | White Label Payment Gateway | Gatewayeast</title>
     <link rel="icon" href="img/favicon.png" />
+    <!-- Animation Pluigin -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -23,9 +26,9 @@
   <body>
     <section class="custom_container">
       <div class="mb-md-4" id="navbar"></div>
-      <div class="blog py-md-5">
-        <h1 class="heading pt-5 pb-3">Gatewayeast</h1>
-        <p class="text-center py-5">Gatewayeast white-label payment gateway is the next generation
+      <div class="blog py-md-5" >
+        <h1 class="heading pt-5 pb-3" data-aos="fade-in">Gatewayeast</h1>
+        <p class="text-center py-5" data-aos="fade-right">Gatewayeast white-label payment gateway is the next generation
             multichannel payment gateway. We tailor a payment gateway as per your
             business needs. Along with this, we provide 24*7 support regarding
             white-label payment gateway. <br><br> We proffer a white-label payment gateway
@@ -35,7 +38,7 @@
             in the industry.</p>
       </div>
     </section>
-    <section class="custom_container1 py-4">
+    <section class="custom_container1 py-4" data-aos="fade-left">
         <div class="blog">
             <div class="row">
                 <div class="col-md-6 col-12">
@@ -71,6 +74,14 @@
     <script>
       $("#navbar").load("../component/header.html");
       $("#footer-section").load("../component/footer.html");
+    </script>
+    <!-- For Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script >
+        AOS.init({
+          offset: 140,
+          duration: 1000,
+        });
     </script>
   </body>
 </html>
